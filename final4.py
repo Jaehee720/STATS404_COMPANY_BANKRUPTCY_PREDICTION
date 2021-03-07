@@ -4,21 +4,20 @@
 # In[1]:
 
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 from catboost import CatBoostClassifier
-from sklearn.model_selection import KFold, StratifiedKFold
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import make_scorer, accuracy_score
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import precision_recall_curve
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import make_scorer, accuracy_score
+from sklearn.metrics import precision_recall_curve
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import KFold, StratifiedKFold
 from sklearn.model_selection import train_test_split
-
 
 # import data
 file_name = "bankrupt_data.csv"
@@ -333,7 +332,7 @@ plt.legend(loc="lower left")
 plt.ylim([0, 1])
 
 
-# In[22]:
+# In[ ]:
 
 
 THRESHOLD = 0.37
@@ -351,7 +350,7 @@ print(
 )
 
 
-# In[23]:
+# In[ ]:
 
 
 thre_37_preds_cat = np.where(
@@ -370,7 +369,7 @@ print(
 )
 
 
-# In[24]:
+# In[ ]:
 
 
 # check features' importance of this model
